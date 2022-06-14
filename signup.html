@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <title>Sign Up - True Crypto</title>
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="description" content=" " />
+    <meta name="keywords" content=" " />
+    <meta name="author" content="" />
+
+    <!-- Og tag-->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="styles/images/social.png" />
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //custom-theme -->
+    <!-- Favicon -->
+    <link href="styles/images/favicon.png" rel="shortcut icon" type="image/png">
+    <!-- js -->
+    <script src="reg-log/js/jquery.min.html"></script>
+    <!-- //js -->
+    <!-- font-awesome-icons -->
+    <link href="reg-log/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <link href="reg-log/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link
+        href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <h1>
+            <div class="sitelogo" style=" background: rgba(1, 0, 21, 0.66); padding: 15px 0 5px;">
+                <a href="index.html">
+                    <img src="netema/assets/img/logo.png" alt="site logo">
+                </a>
+            </div>
+        </h1>
+        <div class="w3_agile_main_grids">
+            <script language=javascript>
+                function checkform() {
+                    if (document.regform.fullname.value == '') {
+                        alert("Please enter your full name!");
+                        document.regform.fullname.focus();
+                        return false;
+                    }
+                    if (document.regform.username.value == '') {
+                        alert("Please enter your username!");
+                        document.regform.username.focus();
+                        return false;
+                    }
+                    if (!document.regform.username.value.match(/^[A-Za-z0-9_\-]+$/)) {
+                        alert("Use letters and digits only for usernme!");
+                        document.regform.username.focus();
+                        return false;
+                    }
+                    if (document.regform.password.value == '') {
+                        alert("Please enter your password!");
+                        document.regform.password.focus();
+                        return false;
+                    }
+                    if (document.regform.password.value != document.regform.password2.value) {
+                        alert("Please check your password!");
+                        document.regform.password2.focus();
+                        return false;
+                    }
+                    if (document.regform.email.value == '') {
+                        alert("Please enter your e-mail address!");
+                        document.regform.email.focus();
+                        return false;
+                    }
+                    if (document.regform.email.value != document.regform.email1.value) {
+                        alert("Please retype your e-mail!");
+                        document.regform.email.focus();
+                        return false;
+                    }
+
+                    for (i in document.regform.elements) {
+                        f = document.regform.elements[i];
+                        if (f.name && f.name.match(/^pay_account/)) {
+                            if (f.value == '') continue;
+                            var notice = f.getAttribute('data-validate-notice');
+                            var invalid = 0;
+                            if (f.getAttribute('data-validate') == 'regexp') {
+                                var re = new RegExp(f.getAttribute('data-validate-regexp'));
+                                if (!f.value.match(re)) {
+                                    invalid = 1;
+                                }
+                            } else if (f.getAttribute('data-validate') == 'email') {
+                                var re = /^[^\@]+\@[^\@]+\.\w{2,4}$/;
+                                if (!f.value.match(re)) {
+                                    invalid = 1;
+                                }
+                            }
+                            if (invalid) {
+                                alert('Invalid account format. Expected ' + notice);
+                                f.focus();
+                                return false;
+                            }
+                        }
+                    }
+
+                    if (document.regform.agree.checked == false) {
+                        alert("You have to agree with the Terms and Conditions!");
+                        return false;
+                    }
+
+                    return true;
+                }
+
+                function IsNumeric(sText) {
+                    var ValidChars = "0123456789";
+                    var IsNumber = true;
+                    var Char;
+                    if (sText == '') return false;
+                    for (i = 0; i < sText.length && IsNumber == true; i++) {
+                        Char = sText.charAt(i);
+                        if (ValidChars.indexOf(Char) == -1) {
+                            IsNumber = false;
+                        }
+                    }
+                    return IsNumber;
+                }
+            </script>
+
+            <form class="agile_form" method=post onsubmit="return checkform()" name="regform">
+                <input type="hidden"
+                    name="form_id" value="16539914506318"><input type="hidden" name="form_token"
+                    value="2d3785e433441195903278b583a23d0d">
+                <input type=hidden name=a value="signup">
+                <input type=hidden name=action value="signup">
+
+                <h3>Registration</h3>
+                <div class="form-group agileits_w3layouts_form w3_agileits_margin">
+                    <div class="wthree_input">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <input type=text name=fullname value="" class="form-control" placeholder="Full Name">
+                    </div>
+                </div>
+
+                <div class="form-group agileits_w3layouts_form">
+                    <div class="wthree_input">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input type=text name=username value="" class="form-control" placeholder="Username">
+                    </div>
+                </div>
+
+                <div class="form-group agileits_w3layouts_form w3_agileits_margin">
+                    <div class="wthree_input">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <input type=text name=email value="" class="form-control" placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="form-group agileits_w3layouts_form">
+                    <div class="wthree_input">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <input type=text name=email1 value="" class="form-control" placeholder="Retype Email">
+                    </div>
+                </div>
+                <div class="form-group agileits_w3layouts_form w3_agileits_margin">
+                    <div class="wthree_input">
+                        <i class="fa fa-key" aria-hidden="true"></i>
+                        <input type=password name=password value="" class="form-control" placeholder="Password">
+                    </div>
+                </div>
+
+                <div class="form-group agileits_w3layouts_form">
+                    <div class="wthree_input">
+                        <i class="fa fa-key" aria-hidden="true"></i>
+                        <input type=password name=password2 value="" class="form-control" placeholder="Retype Password">
+                    </div>
+                </div>
+
+                <div class="form-group agileits_w3layouts_form">
+                    <div class="wthree_input">
+
+                        <input type="checkbox" name="agree" value="1">
+
+                        <label for="brand2" style="color: #06a108;">I accept <a target="_blank"
+                                href="indexa972.html?a=rules">rules &amp; agreement</a></label>
+                    </div>
+                </div>
+
+                <div class="form-group agileits_w3layouts_form">
+                    <div class="wthree_input">
+                        <button type="submit" value="Register" class="btn btn-primary agileinfo_primary submit">Signup  Now</button>
+                    </div>
+                </div>                
+                </fieldset>
+            </form>
+
+            <div id="progress" style="color: #ffffff;">Already have an Account? 
+                <a href="signin.html" style="color: #06a108">Login Account</a>
+            </div>
+            </br>
+
+            <div class="agileits_copyright">
+                <p>© 2022 truecrypto.com. All Rights Reserved | Powered by 
+                    <a href="index.html">truecrypto.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="reg-log/js/jquery.validate.min.html"></script>
+    <script src="reg-log/js/jquery.formtowizard.html"></script>
+
+</body>
+
+</html>
